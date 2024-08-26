@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="css/perfil.css">
+</head>
+
+<body>
+    <div class="general-container">
+        <!-- NavBar -->
+        <div class="layoutnav-container">
+            <div class="navbar-container" id="navbar">
+                <div class="navbar-left">
+                    <div class="menu-button" onclick="toggleMenu()">
+                        <!-- SVG para abrir el menú -->
+                        <svg class="open-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M3 6h18M3 12h18M3 18h18" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <!-- SVG para cerrar el menú -->
+                        <svg class="close-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M16.561 17.777a.86.86 0 0 0 1.216-1.216l-4.552-4.553 4.552-4.552a.86.86 0 0 0-1.216-1.216l-4.552 4.548L7.456 6.24A.86.86 0 0 0 6.24 7.456l4.548 4.552-4.548 4.553a.86.86 0 0 0 1.216 1.216l4.553-4.552 4.552 4.552Z"/>
+                        </svg>
+                    </div>
+                    <a href="index.html"> 
+                        <div class="navbar-logo">
+                          <img src="imgs/example.png" id="logo" alt="Logo">
+                        </div>
+                    </a>
+                </div>
+                <div class="navbar-opciones">
+                    <nav>
+                        <a href="#">
+                            <img src="imgs/bolsa.png" alt="Carrito" width="20" height="20">
+                            Carrito
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <!-- Side Menu -->
+        <div class="side-menu" id="sideMenu">
+            <a href="#">Inicio</a>
+            <a href="#">Hombres</a>
+            <a href="#">Mujeres</a>
+            <a href="#">Niños</a>
+            <a href="#">Ofertas</a>
+            <a href="#">Contacto</a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="layout-container">
+            <div class="profile-container">
+                <h1>Perfil de Usuario</h1>
+                <div id="user-info">
+                    <p><strong>Nombre:</strong> <span id="nombre"></span></p>
+                    <p><strong>Apellido:</strong> <span id="apellido"></span></p>
+                    <p><strong>Correo Electrónico:</strong> <span id="email"></span></p>
+                    <p><strong>Teléfono:</strong> <span id="telefono">No añadido</span></p>
+                </div>
+                <form id="address-form">
+                    <h2>Dirección de Envío</h2>
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" id="direccion" name="direccion" required><br><br>
+                    
+                    <label for="selectProvincias">Provincia:</label>
+                    <select id="selectProvincias" required>
+                        <option value="">Elige una provincia</option>
+                    </select><br><br>
+                    
+                    <label for="selectMunicipios">Municipio:</label>
+                    <select id="selectMunicipios" required>
+                        <option value="">Elige un municipio</option>
+                    </select><br><br>
+                    
+                    <label for="selectLocalidades">Localidad:</label>
+                    <select id="selectLocalidades" required>
+                        <option value="">Elige una localidad</option>
+                    </select><br><br>
+                    
+                    <label for="codigopostal">Código Postal:</label>
+                    <input type="text" id="codigopostal" name="codigo-postal" required><br><br>
+                    
+                    <label for="telefono">Teléfono:</label>
+                    <input type="text" id="telefonod" name="telefonod">
+
+                    <input type="submit" value="Guardar Dirección y Teléfono">
+                </form>
+                <!-- Botón de cerrar sesión -->
+                <button id="cerrarSesionBtn" style="margin-top: 10px;">Cerrar sesión</button>
+                <div id="message" style="color: green; margin-top: 10px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/firebaseconnect.js" type="module"></script>
+    <script src="js/perfil.js" type="module"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

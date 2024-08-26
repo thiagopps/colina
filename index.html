@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abyss Store</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="general-container">
+        <div class="layoutnav-container">
+            <div class="navbar-container" id="navbar">
+                <div class="navbar-left">
+                    <div class="menu-button" onclick="toggleMenu()">
+                        <!-- SVG para abrir el menú -->
+                        <svg class="open-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M3 6h18M3 12h18M3 18h18" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <!-- SVG para cerrar el menú -->
+                        <svg class="close-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M16.561 17.777a.86.86 0 0 0 1.216-1.216l-4.552-4.553 4.552-4.552a.86.86 0 0 0-1.216-1.216l-4.552 4.548L7.456 6.24A.86.86 0 0 0 6.24 7.456l4.548 4.552-4.548 4.553a.86.86 0 0 0 1.216 1.216l4.553-4.552 4.552 4.552Z"/>
+                        </svg>
+                    </div>
+                    <a href="index.html"> 
+                        <div class="navbar-logo">
+                          <img src="imgs/example.png" id="logo" alt="Logo">
+                        </div>
+                    </a>
+                </div>
+                <div class="navbar-opciones">
+                    <nav>
+                        <a href="#" id="cuentaButton">
+                            <img src="imgs/cuenta.png" alt="Cuenta" width="20" height="20">
+                            Cuenta
+                        </a>
+                        <div class="cuenta-menu" id="cuentaMenu" onclick="">
+                            <a href="#" id="cerrarSesion">Cerrar sesión</a>
+                            <!-- Aquí se añaden dinámicamente las opciones -->
+                        </div>
+                        <a href="#">
+                            <img src="imgs/bolsa.png" alt="Carrito" width="20" height="20">
+                            Carrito
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        
+        <div class="side-menu" id="sideMenu">
+            <a href="#">Inicio</a>
+            <a href="#">Hombres</a>
+            <a href="#">Mujeres</a>
+            <a href="#">Niños</a>
+            <a href="#">Ofertas</a>
+            <a href="#">Contacto</a>
+        </div>
+        
+        <div class="layout-container">
+            <article class="article-ropa">
+                <!-- Aquí va el contenido principal de la página -->
+                <article>
+                    <img src="/imgs/photos-png.webp" alt="Buzos">
+                    <h1>Buzos</h1>
+                    <button class="category-btn" id="buzo" >ENTRAR A BUZOS</button>
+                </article>
+                <article>
+                    <img src="/imgs/photos-png.webp" alt="Remeras">
+                    <h1>Remeras</h1>
+                    <button class="category-btn">ENTRAR A REMERAS</button>
+                </article>
+                <article>
+                    <img src="/imgs/photos-png.webp" alt="Pantalones">
+                    <h1>Pantalones</h1>
+                    <button class="category-btn">ENTRAR A PANTALONES</button>
+                </article>
+                <article>
+                    <img src="/imgs/photos-png.webp" alt="Gorras">
+                    <h1>Gorras</h1>
+                    <button class="category-btn">ENTRAR A GORRAS</button>
+                </article>
+                <article>
+                    <img src="/imgs/photos-png.webp" alt="Bandas">
+                    <h1>Bandas</h1>
+                    <button class="category-btn">ENTRAR A BANDAS</button>
+                </article>
+                <article>
+                    <img src="/imgs/photos-png.webp" alt="Marca">
+                    <h1>Marca</h1>
+                    <button class="category-btn">ENTRAR A MARCA</button>
+                </article>
+                <article>
+                    <img src="/imgs/photos-png.webp" alt="Streamers">
+                    <h1>Streamers</h1>
+                    <button class="category-btn">ENTRAR A STREAMERS</button>
+                </article>
+            </article>
+        </div>
+    </div>
+    <script src="js/firebaseconnect.js" type="module"></script>
+    <script src="js/index.js" type="module"></script>
+    <script src="js/script.js"></script>
+    <script>document.getElementById("buzo").addEventListener("click", redirect);
+        function redirect(){ window.location = "buzos.html"; }
+    </script>
+    
+</body>
+</html>
